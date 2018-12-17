@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset = "utf-8"/>
+        <title>Convert Fahrenheit and Celsius</title>
+      <script type="text/javascript">
+                function convertToC() {
+                    var fTempVal = parseFloat(document.getElementById('fTemp').value);
+                var cTempVal = (fTempVal - 32) * (5/9);
+                document.getElementById('cTemp').value = cTempVal;
+            }
+
+            function convertToF() {
+                var cTempVal = parseFloat(document.getElementById('cTemp').value);
+                var fTempVal = (cTempVal * (9/5)) + 32;
+                document.getElementById('fTemp').value = fTempVal;
+            }
+      
+    </script>
+    </head>
+    <body>
+    <form name="conversionForm">
+    <table border="1">
+    <tbody>
+    <tr>
+        <td>Fahrenheit</td>
+        <td><input name="fTemp" type="text"/></td>
+        <tr>
+        <td><button onclick="convertToC">Convert to Celsius</button></td>
+            </tr>
+        <tr>
+        <td>Output</td>
+        <tr> <td><document.getElementById('fTemp').innerHTML = fTempVal;></td></tr>
+            </tr>
+        
+    </tr>
+    <tr>
+        <td>Celsius</td>
+        <td><input name="cTemp" type="text"/></td>
+        <tr></tr>
+        <td><button onclick="convertToF">Convert to Fahrenheit</button></td>
+        </tr>
+        <tr><td>Output</td></tr>
+        <tr><td><document.getElementById('cTemp').value = cTempVal ></td></tr>
+    </tr>
+    </form>
+    </tbody>
+    </table>
+</body>
+</html>
